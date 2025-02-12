@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิทยาลัยอาชีวศึกษาสุราษฎร์ธานี (Suratthani Vocational College)</title>
+    <link rel="stylesheet" href="style.css">  </head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="โลโก้วิทยาลัย">
+                <h1 data-th="วิทยาลัยอาชีวศึกษาสุราษฎร์ธานี" data-en="Suratthani Vocational College">วิทยาลัยอาชีวศึกษาสุราษฎร์ธานี</h1>
+                <p data-th="Suratthani Vocational College" data-en="Suratthani Vocational College">Suratthani Vocational College</p>
+            </div>
+            <div class="header-right" style="font-size: 0.8em;">  <div class="language-selector">
+                    <a href="#" onclick="changeLanguage('th')" style="text-decoration: underline;">THI</a>
+                     <a href="#" onclick="changeLanguage('en')" style="text-decoration: underline;">EN</a>
+                </div>
+                <div class="contact-info">
+                    <p> <img src="phone-icon.png" alt="โทรศัพท์" style="width: 12px; vertical-align: middle;">  077-283001, 077-28449</p>
+                    <p> <img src="email-icon.png" alt="อีเมล" style="width: 12px; vertical-align: middle;">  sarabanjost ac th</p>
+                    <p> <a href="https://www.facebook.com/profile.php?id=100071754115831#"> <img src="facebook-icon.png" alt="Facebook" style="width: 12px; vertical-align: middle;"></a> </p>
+                </div>
+                <div class="search-box">  <input type="text" placeholder="ค้นหา..." style="padding: 5px; border: solid 1px #ccc; border-radius: 3px;">
+                    <button type="submit" style="padding: 5px 10px; background-color: #f0f0f0; border: solid 1px #ccc; border-radius: 3px; cursor: pointer;">ค้นหา</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#" data-th="หน้าหลัก" data-en="Home">หน้าหลัก</a></li>
+                <li><a href="01.html" data-th="ข้อมูลผู้บริหาร" data-en="About Us">ข้อมูลผู้บริหาร</a></li>
+                <li><a href="02.html" data-th="ข้อมูลบุคลากร" data-en="Departments">ข้อมูลบุคลากร</a></li>
+                <li><a href="04.html" data-th="วิชาที่เปิดสอน" data-en="Programs">วิชาที่เปิดสอน</a></li>
+                <li><a href="03.html" data-th="นักเรียนนักศึกษา" data-en="Students">นักเรียนนักศึกษา</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="main-content">
+        <div class="slideshow-container">
+    
+            <div class="slide fade">
+                <img src="1.png" alt="รูปภาพบุคคลสำคัญ 1" style="width:100%">
+            </div>
+    
+            <div class="slide fade">
+                <img src="2.png" alt="รูปภาพบุคคลสำคัญ 2" style="width:100%">
+            </div>
+    
+            <div class="slide fade">
+                <img src="3.png" alt="รูปภาพบุคคลสำคัญ 3" style="width:100%">
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+    <section class="news-section">
+        <h2 data-th="ข่าวประชาสัมพันธ์" data-en="Public Relations News">ข่าวประชาสัมพันธ์</h2>
+        <div class="news-grid">
+            <div class="news-item">
+                <h3 data-th="รับสมัครนักเรียนนักศึกษารอบโควตาความสามารถพิเศษ" data-en="Admissions for Special Ability Quota">รับสมัครนักเรียนนักศึกษารอบโควตาความสามารถพิเศษ</h3>
+                <div class="news-meta">
+                    <p> <img src="user-icon.png" alt="ผู้โพสต์"> <span data-th="โดย" data-en="By">โดย</span> <span data-th="บอม" data-en="bom">บอม</span></p>
+                    <p> <img src="date-icon.png" alt="วันที่"> <span data-th="เมื่อวันที่" data-en="Date">เมื่อวันที่</span> <span data-th="12 กุมภาพันธ์ 2568" data-en="February 12, 2025">12 กุมภาพันธ์ 2568</span></p>
+                </div>
+            </div>
+            <div class="news-item">
+                <h3 data-th="
+                การแข่งขันทักษะการประกอบอาหารไทยเชิงธุรกิจประเภทชุดอาหารว่างบรรจุกล่อง (Food Box Set) ระดับ ปวช. ประเภทวิชาคหกรรม สาขาวิชาอาหารและโภชนาการ ในงานการแข่งขันทักษะวิชาชีพและทักษะพื้นฐาน ระดับชาติ ครั้งที่ 33" data-en="Thai Cuisine Business Skills Competition...">
+                    การแข่งขันทักษะการประกอบอาหารไทยเชิงธุรกิจประเภทชุดอาหารว่างบรรจุกล่อง (Food Box Set) ระดับ ปวช. ประเภทวิชาคหกรรม สาขาวิชาอาหารและโภชนาการ ในงานการแข่งขันทักษะวิชาชีพและทักษะพื้นฐาน ระดับชาติ ครั้งที่ 33</h3>
+                <div class="news-meta">
+                    <p> <img src="user-icon.png" alt="ผู้โพสต์"> <span data-th="โดย" data-en="By">โดย</span> <span data-th="บอม" data-en="bom">บอม</span></p>
+                    <p> <img src="date-icon.png" alt="วันที่"> <span data-th="เมื่อวันที่" data-en="Date">เมื่อวันที่</span> <span data-th="26 มีนษ 2567" data-en="March 26, 2024">26 มีนษ 2567</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    ...
+</main>
+<section class="recruitment-image-section">
+    <img src="recruitment-poster.jpg" alt="โปสเตอร์รับสมัครนักเรียนนักศึกษา" style="max-width:100%;">
+</section>
+<section class="recruitment-image-section"> <h2>รับสมัครนักเรียนนักศึกษา รอบโควตาความสามารถพิเศษ</h2>
+    <p>สมัครได้ตั้งแต่วันที่ 26 ธันวาคม 2567 - 17 กุมภาพันธ์ 2568 (สมัครได้ทุกวัน ไม่เว้นวันหยุดราชการ)</p>
+    <p>อ่านรายละเอียดพร้อมสมัครได้เลย</p>
+    <div class="recruitment-links">
+        <p><a href="https://drive.google.com/drive/folders/1PGB_S7kWgy3lmGSmH8BPF9KMw8YqHBoO?fbclid=IwZXh0bgNhZW0CMTAAAR1p7kkHPs7WyS2CEGL6smL6peErORMJCWsAWAfumCqpmE8x4piAw3NRnVA_aem_oaQXdCToZt0hSkUfl1zKHw">รายละเอียด ปวช.</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1OZhvTaBVuXKWZ8sSSATCj4FbMa4oaSJH?fbclid=IwZXh0bgNhZW0CMTAAAR1dmLR3yXYxwARsbS4OuamLhZ86mbsIvx_ordwGmqCjOlX9tQzppXkKGP4_aem_XpAxZtyGMiNt_LrBRmkg_A">รายละเอียด ปวส.</a></p>
+        <p><a href="https://admission.vec.go.th/web/student.htm?mode=init">สมัคร คลิกที่นี่</a></p>
+    </div>
+    </section>
+    <section class="recruitment-image-section">
+        <img src="04.png" alt="โปสเตอร์รับสมัครนักเรียนนักศึกษา" style="max-width:100%;">
+    </section>
+    <section class="recruitment-image-section"> <h2></h2>
+        <p>วันอังคารที่ 11 กุมภาพันธ์ 2568นายพงษ์ศักดิ์ นุ้ยเจริญ ผู้อำนวยการวิทยาลัยอาชีวศึกษาสุราษฎร์ธานี เป็นประธานในการประกาศผลและมอบรางวัล ” </p>
+        <p>การแข่งขันทักษะการประกอบอาหารไทยเชิงธุรกิจประเภทชุดอาหารว่างบรรจุกล่อง (Food Box Set) ระดับ ปวช. ประเภทวิชาคหกรรม สาขาวิชาอาหารและโภชนาการ ในงานการแข่งขันทักษะวิชาชีพและทักษะพื้นฐาน ระดับชาติ ครั้งที่ 33 ประจำปีการศึกษา 2567</p>
+        <div class="recruitment-links">
+        <p><a href="http://www.svc.ac.th/th/index.php/2730-dayrd-2.html?tmpl=component&print=1&layout=default">อ่านเพิ่มเติม...</a></p>
+    </div>
+    </section>
+    
+     
+<script src="script.js"></script>  </body>
+</html>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิทยาลัยอาชีวศึกษาสุราษฎร์ธานี (Suratthani Vocational College)</title>
+    <link rel="stylesheet" href="style.css">  </head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="โลโก้วิทยาลัย">
+                <h1 data-th="วิทยาลัยอาชีวศึกษาสุราษฎร์ธานี" data-en="Suratthani Vocational College">วิทยาลัยอาชีวศึกษาสุราษฎร์ธานี</h1>
+                <p data-th="Suratthani Vocational College" data-en="Suratthani Vocational College">Suratthani Vocational College</p>
+            </div>
+            <div class="header-right" style="font-size: 0.8em;">  <div class="language-selector">
+                    <a href="#" onclick="changeLanguage('th')" style="text-decoration: underline;">THI</a>
+                     <a href="#" onclick="changeLanguage('en')" style="text-decoration: underline;">EN</a>
+                </div>
+                <div class="contact-info">
+                    <p> <img src="phone-icon.png" alt="โทรศัพท์" style="width: 12px; vertical-align: middle;">  077-283001, 077-28449</p>
+                    <p> <img src="email-icon.png" alt="อีเมล" style="width: 12px; vertical-align: middle;">  sarabanjost ac th</p>
+                    <p> <a href="https://www.facebook.com/profile.php?id=100071754115831#"> <img src="facebook-icon.png" alt="Facebook" style="width: 12px; vertical-align: middle;"></a> </p>
+                </div>
+                <div class="search-box">  <input type="text" placeholder="ค้นหา..." style="padding: 5px; border: solid 1px #ccc; border-radius: 3px;">
+                    <button type="submit" style="padding: 5px 10px; background-color: #f0f0f0; border: solid 1px #ccc; border-radius: 3px; cursor: pointer;">ค้นหา</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" data-th="หน้าหลัก" data-en="Home">หน้าหลัก</a></li>
+                <li><a href="01.html" data-th="ข้อมูลผู้บริหาร" data-en="About Us">ข้อมูลผู้บริหาร</a></li>
+                <li><a href="02.html" data-th="ข้อมูลบุคลากร" data-en="Departments">ข้อมูลบุคลากร</a></li>
+                <li><a href="04.html" data-th="วิชาที่เปิดสอน" data-en="Programs">วิชาที่เปิดสอน</a></li>
+                <li><a href="03.html" data-th="นักเรียนนักศึกษา" data-en="Students">นักเรียนนักศึกษา</a></li>
+            </ul>
+        </div>
+    </nav>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /*  Essential for consistent box model */
+    }
+
+    body {
+        font-family: sans-serif; /* Use a default sans-serif font */
+        background-color: #f4f4f4;  /* Light background */
+        color: #333; /*  Darker text color for readability */
+        line-height: 1.6;  /* Improved line spacing */
+    }
+     /* Container for spacing and centering */
+      .container {
+            max-width: 90%;  /* Adjust as needed */
+            margin: 0 auto;   /* Center horizontally */
+            padding: 1rem;    /* Add some padding around content */
+       }
+    /*  Main layout (grid) */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+        gap: 1.5rem; /*  Space between grid items */
+    }
+
+    /*  White content boxes */
+    .bg-white {
+        background-color: white;
+        padding: 1.5rem; /*  Padding inside the box */
+        border-radius: 0.5rem; /*  Rounded corners */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*  Subtle shadow */
+        overflow: hidden; /*  Important to contain floated content */
+    }
+
+    /*  Headings */
+    header > h2 {  /*  Direct child selector (>) is good practice */
+        font-size: 1.5rem; /*  Clear, large heading */
+        font-weight: bold;
+        color: #444;      /* Slightly darker heading color */
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem; /* Space below heading */
+        border-bottom: 2px solid #ddd; /*  Clean bottom border */
+
+    }
+     header > h3 {
+        font-size: 1.25rem;
+        font-weight: 600; /* Semibold is often better than bold */
+        color: #333;
+        padding: 0.75rem; /* Smaller padding for subheadings */
+        margin-bottom: 0.5rem; /* Space below subheadings */
+
+    }
+     /*  Section Headings (h3 inside .bg-primary-300) */
+     .bg-primary-300 {
+       background-color: #90caf9; /* A shade of blue (adjust to your preference) */
+       color: #fff;            /* White text */
+       border-radius: 0.375rem; /* Rounded corners */
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+    /*  Lists */
+    .space-y-2 > * + * { /*  Selects all elements *after* the first in a group */
+        margin-top: 0.5rem;  /*  Vertical spacing between list items */
+    }
+
+     .space-y-1 > * + * { /*  Selects all elements *after* the first in a group */
+        margin-top: 0.25rem;  /*  Vertical spacing between list items */
+    }
+    ul {
+        list-style: disc;  /*  Standard bullet points */
+        margin-left: 1.5rem; /*  Indentation */
+    }
+
+    /*  Spacing around articles */
+    .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+   .chart-container{
+       max-width: 800px;
+       margin: 1rem auto;  /* Spacing above and below, and centering. */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: 1fr; /* Stack grid items on small screens */
+        }
+
+    }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="grid">
+        <div class="bg-white">
+          <header>
+            <h2 class="font-bold text-xl">
+              จำนวนนักเรียน นักศึกษา ระดับ ปวช. ปวส.1
+            </h2>
+          </header>
+          <article class="chart-container">
+           <canvas id="teacherChart"></canvas>
+          </article>
+
+            <script>
+                const ctx = document.getElementById("teacherChart").getContext('2d');
+                const years = Array.from(
+                  {
+                    length: 2567 - 2558 + 1,
+                  },
+                  (_, i) => 2558 + i
+                );
+
+                new Chart(ctx, {
+                  type: "line",
+                    data: {
+                    labels: years,
+                    datasets: [
+                      {
+                        label:  "ประกาศนียบัตรวิชาชีพ (ปวช.)",
+                        data: [ 2145, 2239, 2268, 2516, 2538, 2416, 2481, 2283, 2154, 2160,],
+                        borderColor: 'rgba(54, 162, 235, 1)',  // Blue
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)', // Light blue fill
+                        borderWidth: 2,
+                        fill: true,  // Fill the area under the line
+                      },
+                      {
+                        label: "ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)",
+                        data: [775, 686, 711, 816, 887, 907, 984, 1003, 905, 833],
+                        borderColor: 'rgba(255, 99, 132, 1)', // Red/Pink
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',  // Light red/pink fill
+                        borderWidth: 2,
+                        fill: true,
+                      },
+                    ],
+                  },
+                  options: {
+                    responsive: true,
+                    maintainAspectRatio: false, //  Allow chart to fill container
+                    scales: {
+                      y: {
+                        beginAtZero: true,
+                         title: {   // Y-axis label.
+                            display: true,
+                            text: 'จำนวน (คน)' // Y-axis label
+                        }
+                      },
+                       x:{
+                           title:{  // X-axis label.
+                               display: true,
+                               text: 'ปีการศึกษา'
+                           }
+                       }
+                    },
+                    plugins: {
+                        title:{
+                            display: true,
+                            text: "จำนวนนักเรียน นักศึกษา",
+                            font:{
+                                size: 18
+                            }
+                        },
+                        subtitle:{
+                            display: true,
+                            text: 'ระดับ ปวช. และ ปวส.1',
+                            font:{
+                                size: 14,
+                                style: 'italic'
+                            },
+                            padding:{
+                                bottom: 10
+                            }
+                        }
+                    }
+                  },
+                });
+            </script>
+        </div>
+        <div class="bg-white">
+          <header>
+            <h2 class="font-bold text-xl">
+              หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.) พุทธศักราช 2564 หลักสูตร 3 ปี
+            </h2>
+          </header>
+          <article class="grid grid-cols-2 gap-6">
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาพาณิชยกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการบัญชี</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการบัญชี</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการตลาด</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการตลาด</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการเลขานุการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการเลขานุการ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาคอมพิวเตอร์ธุรกิจ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานคอมพิวเตอร์ธุรกิจ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาศิลปกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาวิจิตรศิลป์</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานวิจิตรศิลป์</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการออกแบบ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการออกแบบ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาคอมพิวเตอร์กราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานคอมพิวเตอร์กราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาคหกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาธุรกิจคหกรรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานธุรกิจคหกรรม</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาแฟชั่นและสิ่งทอ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานแฟชั่นดีไซน์</li>
+                      <li>สาขางานธุรกิจอาหาร</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาอาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานอาหารและโภชนาการ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมท่องเที่ยว
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการโรงแรม</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการโรงแรม</li>
+                      <li>สาขางานการโรงแรม (ทวิภาคี)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการท่องเที่ยว</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการท่องเที่ยว</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">ประเภทวิชาอุตสาหกรรมอาหาร</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาอาหารและโภชนาการ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานอาหารและโภชนาการ</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาศิลปกรรมและเศรษฐกิจสร้างสรรค์
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาวิจิตรศิลป์</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานวิจิตรศิลป์</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาการออกแบบ</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานการออกแบบ</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาดิจิทัลกราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานดิจิทัลกราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">วิชาศิลปกรรม</h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">สาขาวิชาดิจิทัลกราฟิก</h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานดิจิทัลกราฟิก</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมแฟชั่นและสิ่งทอ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาเทคโนโลยีแฟชั่นและเครื่องแต่งกาย
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเทคโนโลยีแฟชั่นและเครื่องแต่งกาย</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาอุตสาหกรรมดิจิทัลและเทคโนโลยีสารสนเทศ
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y-2">
+                  <li>
+                    <h4 class="font-semibold">
+                      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล
+                    </h4>
+                    <ul class="space-y-1 list-disc pl-6">
+                      <li>สาขางานเทคโนโลยีธุรกิจดิจิทัล</li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="space-y-2">
+              <header class="bg-primary-300 w-full p-2 rounded">
+                <h3 class="font-semibold text-lg">
+                  ประเภทวิชาเทคโนโลยีสารสนเทศและการสื่อสาร
+                </h3>
+              </header>
+              <article class="px-2">
+                <ul class="space-y

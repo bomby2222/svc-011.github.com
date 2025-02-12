@@ -1,0 +1,381 @@
+/*  CSS Reset (ล้างค่าเริ่มต้นของ Browser) - Optional */
+body, html { margin: 0; padding: 0; font-family: sans-serif; }
+/* ... (CSS Reset อื่นๆ หากต้องการ) ... */
+/* Header Styles */
+header { background-color: #f0f0f0; /* สีพื้นหลังส่วนหัว */ }
+.header-container { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; /* ปรับ padding ให้น้อยลง */ } /* ปรับ padding */
+.logo { display: flex; align-items: center; flex-direction: row; /* เปลี่ยนเป็น row เพื่อให้อยู่ในบรรทัดเดียว */ } /* เปลี่ยน flex-direction เป็น row */
+.logo img { width: 40px; height: 40px; margin-right: 10px; } /* ปรับขนาดโลโก้ */
+.logo h1 { font-size: 1.2em; /* ปรับขนาดตัวอักษรชื่อวิทยาลัย */ }
+.logo p { display: none; /* ซ่อนบรรทัด Suratthani Vocational College ไปก่อน ถ้าไม่ต้องการ */ } /* ซ่อนบรรทัดภาษาอังกฤษ */
+.header-right { display: flex; align-items: center; /* จัด header-right ให้อยู่แนวนอน */ }
+.language-selector { margin-right: 15px; /* ปรับระยะห่าง */ }
+.language-selector a { text-decoration: underline; /* ทำเส้นใต้ให้ปุ่มภาษา */ color: #007bff; /* สีลิงก์ */ font-weight: bold; /* ตัวหนา */ } /* ปรับปุ่มภาษา */
+.language-selector a:hover { color: #0056b3; /* สีลิงก์เมื่อ hover */ } /* สีลิงก์ hover */
+.contact-info { display: flex; align-items: center; /* จัดข้อมูลติดต่อแนวนอน */ }
+.contact-info p, .contact-info a { margin-left: 10px; /* ปรับระยะห่าง */ font-size: 0.9em; /* ปรับขนาดตัวอักษรข้อมูลติดต่อ */ } /* ปรับขนาดตัวอักษรข้อมูลติดต่อ */
+.contact-info img { margin-right: 3px; /* ระยะห่างขวาระหว่างไอคอนกับข้อความ */ } /* ระยะห่างไอคอนข้อมูลติดต่อ */
+.search-box { display: flex; /* จัดช่องค้นหาแนวนอน */ }
+.search-box input[type="text"] { padding: 5px; border: solid 1px #ccc; border-radius: 3px; font-size: 0.9em; } /* ปรับขนาดช่องค้นหา */
+.search-box button[type="submit"] { padding: 5px 10px; background-color: #f0f0f0; border: solid 1px #ccc; border-radius: 3px; cursor: pointer; font-size: 0.9em; } /* ปรับขนาดปุ่มค้นหา */
+.search-box button[type="submit"]:hover { background-color: #eee; }
+
+/* ... (CSS ส่วนอื่นๆ ที่เหลือ เหมือนเดิม) ... */
+/* Header Styles */
+header { background-color: #f0f0f0; /* สีพื้นหลังส่วนหัว */ }
+.header-container { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+.logo { display: flex; align-items: center; }
+.logo img { width: 50px; height: 50px; margin-right: 10px; } /* ขนาดโลโก้ */
+.contact-info, .language-selector { display: flex; align-items: center; }
+.contact-info p, .language-selector a { margin-left: 20px; }
+
+/* Navigation Bar Styles */
+nav { background-color: #e0e0e0; /* สีพื้นหลังแถบนำทาง */ }
+.nav-container ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+.nav-container li { margin: 0 20px; }
+.nav-container a { text-decoration: none; color: #333; padding: 10px 15px; display: block; }
+
+/* Main Content Styles */
+main { padding: 20px; }
+.main-content { text-align: center; margin-bottom: 30px; } /* จัดกลางข้อความส่วนขอพระพร */
+.main-content img { max-width: 200px; border: 5px solid #ddd; /* กรอบรูป */ }
+
+/* News Section Styles */
+.news-section h2 { margin-bottom: 20px; }
+.news-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; } /* จัดข่าว 2 คอลัมน์ */
+.news-item { border: 1px solid #ddd; padding: 15px; }
+.news-meta { display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.9em; color: #777; }
+
+/* Footer Styles */
+footer { background-color: #f0f0f0; text-align: center; padding: 10px; border-top: 1px solid #ddd; }
+
+
+/* ปรับแต่งเพิ่มเติมตามต้องการเพื่อให้เหมือนภาพตัวอย่าง */
+/* Slideshow container */
+.slide img {
+    width: 800px; /* กำหนดความกว้างรูปภาพ */
+    height: auto; /* ปรับความสูงตามสัดส่วนความกว้าง */
+    /* หรือ */
+    /* height: 600px;  กำหนดความสูงรูปภาพ */
+    /* width: auto;  ปรับความกว้างตามสัดส่วนความสูง */
+}
+.slideshow-container {
+    max-width: 1000px; /* ปรับขนาดความกว้างสูงสุดของสไลด์โชว์ได้ตามต้องการ */
+    position: relative; /* กำหนด position relative ให้ container หลัก */
+    margin: auto; /* จัดให้อยู่ตรงกลางหน้าจอ */
+  }
+  
+  /* ซ่อนสไลด์เริ่มต้น */
+  .slide {
+    display: none; /* ซ่อนสไลด์ทั้งหมดเริ่มต้น */
+  }
+  
+  /* Fade animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s; /* กำหนด duration ของ animation fade */
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  /* ปุ่มควบคุมสไลด์ (ปุ่มก่อนหน้า/ถัดไป) */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute; /* กำหนดตำแหน่งปุ่มแบบ absolute */
+    top: 50%; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* จัดตำแหน่งปุ่ม "next" ไปทางขวา */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Hover effect สำหรับปุ่ม */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text overlay */
+  .text-overlay {
+    position: absolute; /* กำหนดตำแหน่งข้อความแบบ absolute */
+    bottom: 8px; /* กำหนดระยะห่างจากขอบล่าง */
+    background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังโปร่งแสง */
+    color: #f2f2f2; /* สีข้อความ */
+    width: 100%; /* ความกว้างเต็ม container */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    padding: 8px 12px; /* กำหนด padding */
+  }
+  
+  /* รูปแบบของจุดวงกลม indicator */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  /* Slideshow container */
+.slideshow-container {
+    max-width: 1400px; /* ปรับขนาดความกว้างสูงสุดของสไลด์โชว์ให้ใหญ่ขึ้น */
+    position: relative;
+    margin: auto;
+  }
+  
+  /* ... (CSS ส่วนอื่นๆ ที่เหลือ เหมือนเดิม) ... */
+  
+  /* ปุ่มควบคุมสไลด์ (ปุ่มก่อนหน้า/ถัดไป) */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px; /* ปรับขนาดตัวอักษรของปุ่มให้ใหญ่ขึ้น */
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .slide img {
+    width: 1111px; /* กำหนดความกว้างรูปภาพ */
+    height: auto; /* ปรับความสูงตามสัดส่วนความกว้าง */
+    /* หรือ */
+    /* height: 600px;  กำหนดความสูงรูปภาพ */
+    /* width: auto;  ปรับความกว้างตามสัดส่วนความสูง */
+}
+  /* ... (CSS ส่วนอื่นๆ ที่เหลือ เหมือนเดิม) ... */
+  .slide img {
+    max-width: 100%; /* รูปภาพจะไม่กว้างเกิน Container ของสไลด์ */
+    max-height: 800px; /* รูปภาพจะไม่สูงเกิน 800px */
+    width: auto;
+    height: auto; /* ปรับขนาดตามสัดส่วน */
+}
+/* ... (CSS ส่วนอื่นๆ ก่อนหน้านี้ เหมือนเดิม) ... */
+
+/* ปุ่มควบคุมสไลด์ (ปุ่มก่อนหน้า/ถัดไป) */
+.prev, .next {
+    cursor: pointer;
+    position: fixed; /* เปลี่ยนเป็น position: fixed; เพื่อให้ยึดกับ viewport */
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* จัดตำแหน่งปุ่ม "next" ไปทางขวาและชิดขวาสุดของจอ */
+  .next {
+    right: 0; /* เปลี่ยนเป็น right: 0; เพื่อให้ชิดขวาสุด */
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* จัดตำแหน่งปุ่ม "prev" ไปทางซ้ายและชิดซ้ายสุดของจอ */
+  .prev {
+    left: 0; /* เพิ่ม left: 0; เพื่อให้ชิดซ้ายสุด */
+    border-radius: 0 3px 3px 0;
+  }
+  
+  
+  /* Hover effect สำหรับปุ่ม (เหมือนเดิม) */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  /* Recruitment Image Section Styles (ปรับปรุงให้เหมือนในรูปภาพล่าสุด) */
+.recruitment-image-section {
+    padding: 30px; /* ปรับ padding ให้ดูกว้างขึ้นเล็กน้อย */
+    background-color: #f8f8f8; /* เปลี่ยนสีพื้นหลังให้ใกล้เคียงกับในรูป (สีเทาอ่อนกว่าเดิมเล็กน้อย) */
+    border-radius: 12px; /* ปรับมุมมนให้โค้งมนอีกนิด */
+    margin-bottom: 40px; /* เพิ่ม margin ด้านล่างอีกหน่อย */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.07); /* ปรับเงาให้เข้มขึ้นเล็กน้อย และขยาย blur เล็กน้อย */
+    text-align: center;
+    border: 1px solid #e0e0e0; /* ปรับสีเส้นขอบให้เข้มขึ้นเล็กน้อย */
+}
+
+.recruitment-image-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* ปรับมุมมนของรูปภาพให้มนขึ้นเล็กน้อย */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03); /* เพิ่มเงาเล็กน้อยให้รูปภาพ */
+}
+  /* ... (CSS ส่วนอื่นๆ หลังจากนี้ เหมือนเดิม) ... */
+  .recruitment-image-section {
+    border: 2px dashed gray; /* เส้นขอบ 2px, ประ, สีเทา */
+}
+.recruitment-links a {
+    /* ... CSS เดิมของคุณ ... */
+    border: 1px solid #007bff; /* เพิ่มเส้นขอบขนาด 1px, เส้นทึบ, สีน้ำเงิน (#007bff) */
+    padding: 8px 15px; /* เพิ่ม padding เพื่อให้มีพื้นที่รอบข้อความในกรอบ */
+    border-radius: 5px; /* เพิ่มมุมมนให้กรอบ */
+    display: inline-block; /* ทำให้ลิงก์เป็น inline-block เพื่อจัด padding และ border ได้ */
+    text-decoration: none; /* (ถ้ายังไม่มี) เอาเส้นใต้ลิงก์ออก */
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px; /* ปรับขนาดความกว้างสูงสุดของสไลด์โชว์ */
+    position: relative;
+    margin: auto; /* จัดสไลด์โชว์อยู่ตรงกลาง */
+  }
+  
+  /* ซ่อนรูปภาพเริ่มต้น (ทั้งหมดซ่อนไว้ก่อน JavaScript จะแสดงเฉพาะรูปปัจจุบัน) */
+  .slide {
+    display: none;
+  }
+  
+  /* Fade animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  /* ปุ่มควบคุมสไลด์ (ปุ่มก่อนหน้า/ถัดไป) */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* ปรับขนาดลูกศรให้เล็กลง */
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4); /* เพิ่มสีพื้นหลังให้ปุ่มลูกศร */
+  }
+  
+  /* จัดตำแหน่งปุ่ม "next" ไปทางขวา */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Hover effect สำหรับปุ่ม */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* จุดควบคุมสไลด์ (indicator dots) */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .slideshow-container {
+    max-width: 1000px; /* <-- บรรทัดนี้อาจเป็นตัวจำกัด */
+    position: relative;
+    margin: auto;
+  }
+  /* Media Query สำหรับหน้าจอขนาดเล็ก (มือถือ) - ตัวอย่าง */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* เปลี่ยน header เป็นแนวตั้งบนมือถือ */
+        text-align: center; /* จัดข้อความใน header ตรงกลาง */
+        padding: 10px; /* ปรับ padding header บนมือถือ */
+    }
+    .logo {
+        flex-direction: column; /* โลโก้เป็นแนวตั้งบนมือถือ */
+        margin-bottom: 10px; /* เพิ่ม margin ใต้โลโก้ */
+    }
+    .logo img {
+        width: 50px; /* โลโก้เล็กลงบนมือถือ */
+        height: 50px;
+    }
+    .logo h1 {
+        font-size: 1.5em; /* หัวข้อวิทยาลัยใหญ่ขึ้นบนมือถือ */
+    }
+    .header-right {
+        flex-direction: column; /* header-right เป็นแนวตั้งบนมือถือ */
+    }
+    .language-selector, .contact-info, .search-box {
+        margin: 10px 0; /* ปรับ margin ของ language, contact, search บนมือถือ */
+        justify-content: center; /* จัด items ให้อยู่ตรงกลาง */
+    }
+    .nav-container ul {
+        flex-direction: column; /* แถบเมนูเป็นแนวตั้งบนมือถือ */
+        text-align: center; /* จัดเมนูตรงกลาง */
+    }
+    .nav-container li {
+        margin: 10px 0; /* ปรับ margin รายการเมนูบนมือถือ */
+    }
+    .nav-container a {
+        padding: 10px; /* ปรับ padding เมนูบนมือถือ */
+    }
+    .news-grid {
+        grid-template-columns: 1fr; /* ข่าวเรียงคอลัมน์เดียวบนมือถือ */
+    }
+    .slideshow-container {
+        max-width: 100%; /* สไลด์โชว์กว้างเต็มจอ */
+    }
+    .slide img {
+        width: 100%; /* รูปภาพสไลด์เต็มความกว้างสไลด์โชว์ */
+        height: auto; /* ปรับความสูงอัตโนมัติ */
+    }
+    .prev, .next {
+        font-size: 1.2em; /* ปุ่มลูกศรเล็กลงบนมือถือ */
+        padding: 8px; /* padding ปุ่มลูกศรเล็กลงบนมือถือ */
+        margin-top: -16px; /* ปรับ margin ปุ่มลูกศรบนมือถือ */
+    }
+}
+
+/* Media Query สำหรับหน้าจอขนาดแท็บเล็ต - ตัวอย่าง (ถ้าต้องการปรับแท็บเล็ตต่างจาก desktop) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* คุณสามารถใส่ CSS เพิ่มเติมสำหรับแท็บเล็ตได้ที่นี่ */
+    .news-grid {
+        grid-template-columns: 1fr; /* ข่าวเรียงคอลัมน์เดียวบนแท็บเล็ต (หรือปรับเป็น 2 คอลัมน์ก็ได้) */
+    }
+    .slideshow-container {
+        max-width: 90%; /* สไลด์โชว์กว้าง 90% บนแท็บเล็ต */
+    }
+}
+
+/* Media Query สำหรับหน้าจอ Desktop ขนาดใหญ่ - ตัวอย่าง (ถ้าต้องการปรับ desktop ใหญ่พิเศษ) */
+@media screen and (min-width: 1025px) {
+    /* คุณสามารถใส่ CSS เพิ่มเติมสำหรับ Desktop ขนาดใหญ่ได้ที่นี่ (ถ้าต้องการ) */
+    .slideshow-container {
+        max-width: 1200px; /* สไลด์โชว์กว้าง 1200px บน Desktop ใหญ่พิเศษ */
+    }
+} 

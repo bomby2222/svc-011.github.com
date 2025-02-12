@@ -1,0 +1,184 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+.profiles-container {
+    display: flex;
+    flex-direction: row; /* จัดเรียงการ์ดในแนวนอน (เริ่มต้น) */
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.profile-card {
+    width: 48%; /* การ์ดกว้าง 48% เมื่ออยู่ข้างกัน (เริ่มต้น) */
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    border: 1px solid #ddd;
+    flex-grow: 1;
+}
+
+/* ----- ส่วนหัวของการ์ดโปรไฟล์ (เหมือนเดิม) ----- */
+.profile-header {
+    background-color: #f0f8ff;
+    color: #333;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+}
+
+.admin-text {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 0.95em;
+    color: #777;
+}
+
+.data-info {
+    display: flex;
+    font-size: 0.85em;
+    color: #999;
+}
+
+.data-item {
+    margin-right: 8px;
+}
+
+.hit-icon {
+    margin-right: 2px;
+}
+
+.settings-icon {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* ----- เนื้อหาของการ์ดโปรไฟล์ (เหมือนเดิม) ----- */
+.profile-content {
+    padding: 20px 20px;
+    display: flex;
+    border-top: none;
+}
+
+.profile-text-section {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.profile-image-section {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.profile-name {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.profile-position {
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.education-section,
+.rank-section,
+.position-detail-section,
+.phone-section {
+    margin-bottom: 15px;
+}
+
+.education-section h3,
+.rank-section h3,
+.position-detail-section h3,
+.phone-section h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.education-section p,
+.rank-section p,
+.position-detail-section p,
+.phone-section p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+
+
+.profile-card {
+    position: relative;
+}
+
+/* ----- Media Queries สำหรับ Responsive Design ----- */
+
+/* สำหรับหน้าจอขนาดเล็กกว่า 768px (เช่น มือถือ) */
+@media (max-width: 768px) {
+    .profiles-container {
+        flex-direction: column; /* เปลี่ยนเป็นเรียงแนวตั้ง */
+        align-items: center; /* จัดตรงกลางแนวนอน */
+        gap: 30px; /* เพิ่มระยะห่างระหว่างการ์ดแนวตั้ง */
+    }
+
+    .profile-card {
+        width: 90%; /* การ์ดกว้าง 90% ของหน้าจอ */
+        min-width: auto; /* ยกเลิก min-width เพื่อให้กว้างเต็มที่ */
+    }
+
+    .profile-content {
+        flex-direction: column; /* เปลี่ยนเนื้อหาเป็นการเรียงแนวตั้ง */
+    }
+
+    .profile-text-section {
+        padding-right: 0; /* ยกเลิก padding ขวาของส่วนข้อความ */
+        margin-bottom: 20px; /* เพิ่ม margin ล่างส่วนข้อความ */
+        text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    }
+
+    .profile-image-section {
+        text-align: center; /* จัดรูปภาพให้อยู่ตรงกลาง */
+    }
+
+    .profile-image-section img {
+        max-width: 70%; /* ปรับขนาดรูปภาพให้เล็กลงบนมือถือ */
+    }
+}
+
+/* คุณสามารถเพิ่ม Media Queries สำหรับขนาดอื่นๆ ได้ เช่น แท็บเล็ต (ถ้าต้องการปรับละเอียดมากขึ้น) */
+/* @media (min-width: 769px) and (max-width: 1024px) { ... CSS สำหรับแท็บเล็ต ... } */
